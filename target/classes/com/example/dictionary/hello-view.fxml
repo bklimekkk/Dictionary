@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.HelloController">
+    <top>
+
+        <HBox alignment="CENTER">
+            <ImageView fx:id="british" fitHeight="100.0" fitWidth="150.0" onMouseClicked="#setLeft">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin></ImageView>
+
+            <VBox alignment="CENTER" prefWidth="161.0">
+                <TextField fx:id="textField" onKeyPressed="#delete" onKeyReleased="#translate" promptText="enter word">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin></TextField>
+                <Label fx:id="label" text="Translation">
+                    <font>
+                        <Font size="30.0" />
+                    </font></Label>
+                <Label fx:id="swapLabel" onMouseClicked="#swap" text="swap">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <HBox.margin>
+                    <Insets left="20.0" right="20.0" />
+                </HBox.margin>
+            </VBox>
+
+            <ImageView fx:id="french" fitHeight="100.0" fitWidth="150.0" onMouseClicked="#setRight">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin></ImageView>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+
+    </top>
+    <center>
+        <GridPane fx:id="gridPane" alignment="CENTER">
+            <ImageView fx:id="german" fitHeight="100.0" fitWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <GridPane.margin>
+                    <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+                </GridPane.margin></ImageView>
+            <ImageView fx:id="spanish" fitHeight="100.0" fitWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <GridPane.margin>
+                    <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+                </GridPane.margin></ImageView>
+            <ImageView fx:id="italian" fitHeight="100.0" fitWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <GridPane.margin>
+                    <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+                </GridPane.margin></ImageView>
+
+
+            <ImageView fx:id="british1" fitHeight="100.0" fitWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <GridPane.margin>
+                    <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+                </GridPane.margin></ImageView>
+            <ImageView fx:id="french1" fitHeight="100.0" fitWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <GridPane.margin>
+                    <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+                </GridPane.margin></ImageView>
+            <ImageView fx:id="polish" fitHeight="100.0" fitWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <GridPane.margin>
+                    <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+                </GridPane.margin></ImageView>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </center>
+</BorderPane>
